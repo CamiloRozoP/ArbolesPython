@@ -9,11 +9,12 @@ def inorden(arbol):
         return ""
     else:
         return inorden(arbol.izquierda)+arbol.valor+inorden(arbol.derecha)
-def preorden(arbol):
-     if arbol==None:
+
+def posorden(arbol):
+    if arbol==None:
         return ""
-     else:
-        return arbol.valor+preorden(arbol.izquierda)+preorden(arbol.derecha)
+    else:
+        return posorden(arbol.izquierda)+posorden(arbol.derecha)+arbol.valor
 
 def buscar (arbol, valor):
     if arbol== None:
@@ -22,6 +23,16 @@ def buscar (arbol, valor):
         return True
     else:
         return buscar(arbol.izquierda,valor)+buscar (arbol.derecha,valor)
+
+def buscarBinario (arbol, valor):
+    if arbol==None:
+        return False
+    if arbol.valor== valor:
+        return True
+    elif arbol.valor<valor:
+        return buscar(arbol.izquierda,valor)
+    elif arbol.valor>valor:
+        return buscar(arbol.derecha,valor)
 
 def evaluar(arbol):
     if arbol.valor=='+':
