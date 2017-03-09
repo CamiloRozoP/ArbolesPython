@@ -1,5 +1,5 @@
 class Nodo():
-    def __init__(self, valor, izq = None, der = None):.
+    def __init__(self, valor, izq = None, der = None):
         self.valor= valor
         self.izquierda = izq
         self.derecha=der
@@ -19,15 +19,27 @@ def buscar (arbol, valor):
         return buscar(arbol.izquierda,valor)+buscar (arbol.derecha,valor)
 
 def evaluar(arbol):
-    if arbol.valor=='+'
+    if arbol.valor=='+':
         return evaluar(arbol.izquierda)+ evaluar(arbol.derecha)
-    elif arbol.valor=='-'
+    elif arbol.valor=='-':
         return evaluar(arbol.izquierda)- evaluar(arbol.derecha)
-    elif arbol.valor=='*'
+    elif arbol.valor=='*':
         return evaluar(arbol.izquierda)* evaluar(arbol.derecha)
-    elif arbol.valor=='/'
+    elif arbol.valor=='/':
         return evaluar(arbol.izquierda)/ evaluar(arbol.derecha)
     else:
         return int(arbol.valor)
 
+def insertar(arbol,valor):
+    if arbol == None:
+        return Nodo(valor)
+    if int(arbol.valor) > int(valor):
+        return Nodo(arbol.valor,insertar(arbol.izquierda, valor),arbol.derecha)
+    else:
+        return Nodo(arbol.valor,arbol.izquierda,insertar(arbol.derecha, valor)) 
+
+a = Nodo('10',Nodo('5'),Nodo('20',Nodo('15'),Nodo('25')))
+print(inorden(insertar(a,'50')))
+
+   
 
