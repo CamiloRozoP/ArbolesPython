@@ -9,7 +9,13 @@ def inorden(arbol):
         return ""
     else:
         return inorden(arbol.izquierda)+arbol.valor+inorden(arbol.derecha)
-
+    
+def preorden(arbol):
+     if arbol==None:
+        return ""
+     else:
+        return arbol.valor+preorden(arbol.izquierda)+preorden(arbol.derecha)
+    
 def posorden(arbol):
     if arbol==None:
         return ""
