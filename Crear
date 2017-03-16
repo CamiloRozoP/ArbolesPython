@@ -1,2 +1,3 @@
 a = Nodo_nario('a',[(Nodo_nario('ab',[Nodo_nario('aba',[Nodo_nario('aban',[Nodo_nario('abano')])]),Nodo_nario('abo',[Nodo_nario('abof',[Nodo_nario('abofe')])])])),
-               (Nodo_nario('ac',[Nodo_nario('act',[Nodo_nario('acto',[Nodo_nario('actor')])]),Nodo_nario('acu',[Nodo_nario('acus',[Nodo_nario('acuso')])]),Nodo_nario('aci',[Nodo_nario('acil',[Nodo_nario('acilo')])])]))])
+               (Nodo_nario('ac',[Nodo_nario('act',[Nodo_nario('acto',[Nodo_nario('actor')])]),Nodo_nario('acu',[Nodo_nario('acus',[Nodo_nario('acuso')])]),Nodo_nario('aci',[Nodo_nario('acil',[Nodo_nario('acilo')])])])),
+                    (Nodo_nario('ad',[Nodo_nario('add',[Nodo_nario('adob',[Nodo_nario('adobe'),Nodo_nario('adobo')])]),Nodo_nario('ado',[Nodo_nario('ador',[Nodo_nario('adoro')])])]))])
