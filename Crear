@@ -1,2 +1,2 @@
-a = Nodo_nario('a',[(Nodo_nario('b',[Nodo_nario('a',Nodo_nario('n',Nodo_nario('o'))),Nodo_nario('o',Nodo_nario('f',Nodo_nario('e')))])),
-               (Nodo_nario('c',[Nodo_nario('t',Nodo_nario('o',Nodo_nario('r'))),Nodo_nario('u',Nodo_nario('s',Nodo_nario('o'))),Nodo_nario('i',Nodo_nario('l',Nodo_nario('o')))]))])
+a = Nodo_nario('a',[(Nodo_nario('ab',[Nodo_nario('aba',[Nodo_nario('aban',[Nodo_nario('abano')])]),Nodo_nario('abo',[Nodo_nario('abof',[Nodo_nario('abofe')])])])),
+               (Nodo_nario('ac',[Nodo_nario('act',[Nodo_nario('acto',[Nodo_nario('actor')])]),Nodo_nario('acu',[Nodo_nario('acus',[Nodo_nario('acuso')])]),Nodo_nario('aci',[Nodo_nario('acil',[Nodo_nario('acilo')])])]))])
