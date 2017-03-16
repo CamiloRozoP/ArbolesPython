@@ -1,0 +1,2 @@
+a = Nodo_nario('a',[(Nodo_nario('b',[Nodo_nario('a',Nodo_nario('n',Nodo_nario('o'))),Nodo_nario('o',Nodo_nario('f',Nodo_nario('e')))])),
+               (Nodo_nario('c',[Nodo_nario('t',Nodo_nario('o',Nodo_nario('r'))),Nodo_nario('u',Nodo_nario('s',Nodo_nario('o'))),Nodo_nario('i',Nodo_nario('l',Nodo_nario('o')))]))])
