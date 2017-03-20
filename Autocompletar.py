@@ -3,28 +3,32 @@ class Nodo_nario():
         self.valor= valor
         self.hijos= hijos
 
-def autocompletar(arbol):
-    if arbol == None:
-        return []
+def mandarHijos(arbol, hijo):
+    if len(arbol.hijos) == hijo + 1 :
+        return mandarHijos(arbol.hijos[hijo],0)
+    elif len(arbol.hijos) == 0:
+        return [arbol.valor]
     else:
-        return mandarHijos(arbol,0)+mandarHijos(arbol.hijos[0],0)
+        return mandarHijos(arbol.hijos[hijo],0)+mandarHijos(arbol,hijo+1)
 
-def mandarHijos(arbol,hijo):
-    if len(arbol.hijos) == hijo+1:
-        return [ultimo(arbol.hijos[hijo])]
+def buscarvalor(arbol, valor, hijo):
+    if arbol.valor==valor:
+        return mandarHijos(arbol,0)
     else:
-        return [ultimo(arbol.hijos[hijo])] + mandarHijos(arbol,hijo+1)
-        """mandarHijos(arbol.hijos[hijo],hijo)"""
+        if len(arbol.hijos) == hijo + 1 :
+            return buscarvalor(arbol.hijos[hijo],valor,0)
+        elif len(arbol.hijos) == 0:
+            return []
+        else:
+            return buscarvalor(arbol.hijos[hijo],valor,0)+buscarvalor(arbol,valor,hijo+1)
 
-def ultimo(arbol):
-    if arbol.hijos == []:
-        return arbol.valor
-    else:
-        return ultimo(arbol.hijos[0])
 
 a = Nodo_nario('a',[(Nodo_nario('ab',[Nodo_nario('aba',[Nodo_nario('aban',[Nodo_nario('abano')])]),Nodo_nario('abo',[Nodo_nario('abof',[Nodo_nario('abofe')])])])),
-               (Nodo_nario('ac',[Nodo_nario('act',[Nodo_nario('acto',[Nodo_nario('actor')])]),Nodo_nario('acu',[Nodo_nario('acus',[Nodo_nario('acuso')])]),Nodo_nario('aci',[Nodo_nario('acil',[Nodo_nario('acilo')])])]))])
+               (Nodo_nario('ac',[Nodo_nario('act',[Nodo_nario('acto',[Nodo_nario('actor')])]),Nodo_nario('acu',[Nodo_nario('acus',[Nodo_nario('acuso'),Nodo_nario('acusa')])]),Nodo_nario('aci',[Nodo_nario('acil',[Nodo_nario('acilo')])])]))])
 
-b= Nodo_nario('a',[Nodo_nario('am'),Nodo_nario('ab')])
+b= Nodo_nario('a',[Nodo_nario('am',[Nodo_nario('amo',[Nodo_nario('amor'),Nodo_nario('amoc'),Nodo_nario('amol')])
+                                    ,Nodo_nario('ama'),Nodo_nario('ame')])
+                   ,Nodo_nario('ab')])
 
-print(autocompletar(a))
+print("Posibles palabras")
+print(buscarvalor(a,"a",0))
